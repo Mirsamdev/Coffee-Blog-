@@ -137,12 +137,16 @@ font-weight: 700;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 2rem;
+  border: none;
 }
 
 @media (min-width: 768px) {
     .button {
       display: inline-block;
     }
+ }
+ .button:hover {
+  cursor: pointer;
  }
  .button--primary {
   background-color: var(--black);
@@ -243,3 +247,60 @@ height: min-content;
   .course__info {
     font-size: 2rem;
   }
+
+.entrance-page__text {
+  margin-bottom: 10rem;
+}
+.ptext-bold {
+  font-weight: 1000;
+}
+.pbetter {
+  font-weight: 400;
+  font-size: large;
+}
+.contact-bg {
+  background-image: url(../img/contacto.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.form {
+background-color: var(--white);
+margin: -5rem auto 0 auto;
+width: 95%;
+padding: 5rem;
+}
+.field {
+display: flex;
+margin-bottom: 2rem;
+}
+.field__label {
+  flex: 0 0 9rem;
+  text-align: center;
+  padding-right: 2rem;
+}
+.field__campo {
+  flex: 1;
+  border: 1px solid var(--gray);
+  padding-left: 1rem;
+  overflow: auto;
+}
+.field__campo--textarea {
+  flex: 1;
+height: 10rem;
+}
+@media (max-width: 390px) {
+    .field__campo {
+      padding: 1rem;
+      flex: 10 10 20rem;
+    }
+
+  }
+  @media (max-width: 768px) {
+      .button {
+display: flex;
+width: 95%;
+justify-content: center;
+      }
+
+   }
