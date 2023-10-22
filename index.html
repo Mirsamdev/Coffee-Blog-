@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee Blog</title>
+  <!-- Prefetch -->
+<link rel="prefetch" href="about.html" as="document">
+  <!-- Preload -->
+  <link rel="preload" href="css/normalize.css" as="style">
   <link rel="stylesheet" href="css/normalize.css">
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=PT+Sans:ital,wght@0,700;1,400&display=swap" crossorigin="crossorigin" as="font">
+
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=PT+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+
+  <link rel="preload" href="css/styles.css" as="style">
   <link rel="stylesheet" href="css/styles.css">
+<!-- Preload -->
+  
 </head>
 <body>
   
@@ -38,7 +50,11 @@
 <h3>Our Blog</h3>
 <article class="entrance">
 <div class="entrance__image">
-  <img src="img/blog1.jpg" alt="blog image">
+  <picture>
+    <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+    <img loading="lazy" src="img/blog1.jpg" alt="blog image">
+  </picture>
+  
 </div>
 <div class="entrance__content">
   <h4 class="no-margin">Types of Coffee Beans</h4>
@@ -50,7 +66,10 @@
 
 <article class="entrance">
   <div class="entrance__image">
-    <img src="img/blog2.jpg" alt="blog image">
+    <picture>
+      <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+      <img loading="lazy" src="img/blog2.jpg" alt="blog image">
+    </picture>
   </div>
   <div class="entrance__content">
     <h4 class="no-margin">3 delicious coffee recipes</h4>
@@ -61,7 +80,10 @@
 
   <article class="entrance">
     <div class="entrance__image">
-      <img src="img/blog3.jpg" alt="blog image">
+      <picture>
+        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+        <img loading="lazy" src="img/blog3.jpg" alt="blog image">
+      </picture>
     </div>
     <div class="entrance__content">
       <h4 class="no-margin">Coffee Benefits</h4>
@@ -125,5 +147,7 @@
   </div>
 </footer>
 
+
+<script src="js/modernizr.js"></script>
 </body>
 </html>

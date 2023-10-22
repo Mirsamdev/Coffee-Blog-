@@ -60,8 +60,13 @@ img {
   text-align: center;
 }
 /* Header */
-.header {
+.webp .header {
+  background-image: url(../img/banner.webp);
+}
+.no-webp .header {
   background-image: url(../img/banner.jpg);
+}
+.header {
   height: 60rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -298,9 +303,9 @@ height: 10rem;
   }
   @media (max-width: 768px) {
       .button {
-display: flex;
-width: 95%;
-justify-content: center;
+      display: flex;
+      width: 95%;
+      justify-content: center;
       }
 
    }
