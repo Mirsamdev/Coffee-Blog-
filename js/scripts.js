@@ -1,5 +1,5 @@
 // querySelector
-const heading = document.querySelector(".header__text h2"); // retorna 0 o 1 elemntos
+const heading = document.querySelector('.header__text h2'); // retorna 0 o 1 elemntos
 heading.textContent = 'Nuevo Heading';
 console.log(heading);
 
@@ -7,7 +7,8 @@ console.log(heading);
 
 
 // querySelectorAll
-const enlaces = document.querySelectorAll(".navegacion a")
+const enlaces = document.querySelectorAll('.navegation a');
+console.log(enlaces);
 
 
 
