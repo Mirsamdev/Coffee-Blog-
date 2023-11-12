@@ -18,14 +18,14 @@ const nuevoEnlace = document.createElement('A')
 // Agregar el href
 nuevoEnlace.href = 'nuevo-enlace.html';
 // Agregar el texto
-nuevoEnlace.href = 'nuevo-enlace.html';
+nuevoEnlace.textContent = 'tienda virtual';
 // Agregar la clase
-nuevoEnlace.classList.add('navegacion_enlace');
+nuevoEnlace.classList.add('navegacion__enlace');
 
 
 // Agregarlo al documento
 const navegation = document.querySelector('.navegation');
-navegation.appendChild(nuevoEnlace)
+navegation.appendChild(nuevoEnlace);
 
 
 
@@ -38,6 +38,34 @@ console.log(nuevoEnlace);
 
 
 
+// Eventos
+
+console.log(1);
+
+window.addEventListener('Load', function() {  // load espera a que el javascript y los archivos que dependen del html esten listos
+  console.log(2);
+});
+
+window.onload = function() {
+  console.log(3);
+}
+
+document.addEventListener('DOMContentLoaded', function() { // solo espera a que se descargue el html no css ni imagenes
+  console.log(4);
+})
 
 
-// getElementID
+
+
+console.log(5);
+
+// Seleccionar elementos y asociarles un evento
+const btnEnviar = document.querySelector('.button--primary');
+btnEnviar.addEventListener('click', function(event) {
+ console.log(event);
+ event.preventDefault();
+})
+
+// Validar un formulario
+
+console.log('enviando formulario')
