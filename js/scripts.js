@@ -73,6 +73,8 @@ console.log(nuevoEnlace);
 
 // // Validar un formulario
 
+
+
 // console.log('enviando formulario')
 // })
 
@@ -95,16 +97,6 @@ email.addEventListener('input', leerTexto);
 message.addEventListener('input', leerTexto);
 
 
-// El evento de submit
-formulario.addEventListener('submit', function(evento) {
-  evento.preventDefault();
-  console.log('Enviando Formulario')
-
-  // Validar el formulario
-
-  // Enviar el formulario
-});
-
 function leerTexto(e) {
   // console.log(e.target.value);
 
@@ -113,5 +105,70 @@ datos[e.target.id] = e.target.value
 console.log(datos);
 }
 
+// El evento de submit
+formulario.addEventListener('submit', function(evento) {
+  evento.preventDefault();
 
 
+  // Validar el formulario
+
+const { name, email, message } = datos;
+
+if(name === '' || email === '' || message === '' ) {
+  mostrarError('Todos los campos son obligatorios')
+
+  
+
+  
+
+  return; // Corta la ejecucion del codigo
+}
+
+  // Enviar el formulario
+
+  // console.log('Enviando Formulario')
+
+  function mostrarAlerta(mensaje) {
+    const alerta = document.createElement('P')
+    alerta.textContent = mensaje;
+  }
+
+
+
+
+// Muestra un error en pantalla
+function mostrarError(message) {
+
+
+  error.classList.add('error');
+
+  formulario.appendChild( error );
+
+
+// Desaparezca despues de 5 segundos 
+setTimeout(() => {
+  error.remove();
+}, 5000);
+}
+
+
+// Crear la alerta de enviar correctamente
+
+
+mostrarAlerta('Enviado Correctamente')
+
+function exitoso(message) {
+
+
+  exitoso.classList.add('exitoso');
+
+  formulario.appendChild( exitoso );
+
+
+// Desaparezca despues de 5 segundos 
+setTimeout(() => {
+  exitoso.remove();
+}, 5000);
+}
+
+});
